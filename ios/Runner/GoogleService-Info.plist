@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>38490852888-ie06kaq8rt3kgolub70joe3g54k8u87m.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.38490852888-ie06kaq8rt3kgolub70joe3g54k8u87m</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>38490852888-t9q4dq4gvg6mlpunhtgm1cfpkr1c0n9p.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBl28TWUADiDQMMVowSCf2ZGmQxqm4mjig</string>
+	<key>GCM_SENDER_ID</key>
+	<string>38490852888</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.tcc.energycontrol</string>
+	<key>PROJECT_ID</key>
+	<string>energy-monitor-v1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>energy-monitor-v1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:38490852888:ios:06837533a8a2533b03bd6d</string>
+</dict>
+</plist>
