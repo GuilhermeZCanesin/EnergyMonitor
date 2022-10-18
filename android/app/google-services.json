@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "38490852888",
+    "project_id": "energy-monitor-v1",
+    "storage_bucket": "energy-monitor-v1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:38490852888:android:8d3151e940ab20c603bd6d",
+        "android_client_info": {
+          "package_name": "com.tcc.energycontrol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "38490852888-t9q4dq4gvg6mlpunhtgm1cfpkr1c0n9p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tcc.energycontrol",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "38490852888-vc4eg764qqg8loe1dfbnc47svio967et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrBv0EGUqeAttgDF7_D20UHUzVTvYdQ6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "38490852888-vc4eg764qqg8loe1dfbnc47svio967et.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "38490852888-ie06kaq8rt3kgolub70joe3g54k8u87m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tcc.energycontrol"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
