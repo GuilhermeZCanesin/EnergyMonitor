@@ -23,5 +23,37 @@ double getConsumptionAvg(List<double>? consumptionList) {
 }
 
 double getAllConsumptionAvg(List<DocumentReference>? userEquip) {
-  return 0.0;
+  if (userEquip == null || userEquip.isEmpty) return 0.0;
+  double sum = 0;
+  double avg = 0;
+  double finalAvg = 0;
+  List<int> indices = List<int>.generate(userEquip.length, (i) => i);
+
+  List fullList =
+      indices.take(userEquip.length).map((i) => userEquip[i]).toList();
+
+  for (var itemList in fullList) {
+    for (var item in itemList.consumption) {
+      sum = sum + item;
+    }
+    avg = sum / itemList.length;
+    finalAvg = finalAvg + avg;
+    sum = 0;
+    avg = 0;
+  }
+  return finalAvg;
+}
+
+double getRTAllConsumptionAvg(List<DocumentReference>? userEquip) {
+  if (userEquip == null || userEquip.isEmpty) return 0.0;
+  double sum = 0;
+  List<int> indices = List<int>.generate(userEquip.length, (i) => i);
+
+  List fullList =
+      indices.take(userEquip.length).map((i) => userEquip[i]).toList();
+
+  for (var item in fullList) {
+    sum = sum + item.consumptionRT;
+  }
+  return sum;
 }

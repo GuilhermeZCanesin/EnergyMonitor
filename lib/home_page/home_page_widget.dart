@@ -63,13 +63,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(12, 12, 12, 12),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             AuthUserStreamWidget(
                               child: Text(
@@ -80,7 +82,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               [])
                                           .toList()),
                                   formatType: FormatType.custom,
-                                  format: '#.00 W',
+                                  format: '#0.00 W',
                                   locale: '',
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -97,7 +99,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                               child: Text(
-                                'Consumo médio',
+                                'Consumo médio total',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyText2
                                     .override(
@@ -107,6 +109,46 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       fontWeight: FontWeight.normal,
                                     ),
                               ),
+                            ),
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Text(
+                                  'Tempo real médio: ',
+                                  textAlign: TextAlign.start,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                        fontSize: 10,
+                                      ),
+                                ),
+                                AuthUserStreamWidget(
+                                  child: Text(
+                                    formatNumber(
+                                      functions.getRTAllConsumptionAvg(
+                                          (currentUserDocument?.userEquips
+                                                      ?.toList() ??
+                                                  [])
+                                              .toList()),
+                                      formatType: FormatType.custom,
+                                      format: '#0.00 W',
+                                      locale: '',
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
@@ -365,8 +407,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     options: FFButtonOptions(
                                       width: 100,
                                       height: 30,
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryColor,
+                                      color: listViewEquipmentsRecord.state!
+                                          ? FlutterFlowTheme.of(context)
+                                              .primaryColor
+                                          : Color(0xFF8881BE),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .subtitle2
                                           .override(
@@ -374,8 +418,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             color: valueOrDefault<Color>(
                                               listViewEquipmentsRecord.state!
                                                   ? Color(0xFFA70A0A)
-                                                  : FlutterFlowTheme.of(context)
-                                                      .primaryColor,
+                                                  : Color(0xFF199B24),
                                               FlutterFlowTheme.of(context)
                                                   .primaryColor,
                                             ),

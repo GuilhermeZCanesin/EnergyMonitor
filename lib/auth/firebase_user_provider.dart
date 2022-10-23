@@ -1,8 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:rxdart/rxdart.dart';
 
-import 'auth_util.dart';
-
 class EnergyControlFirebaseUser {
   EnergyControlFirebaseUser(this.user);
   User? user;
@@ -20,7 +18,6 @@ Stream<EnergyControlFirebaseUser> energyControlFirebaseUserStream() =>
         .map<EnergyControlFirebaseUser>(
       (user) {
         currentUser = EnergyControlFirebaseUser(user);
-        updateUserJwtTimer(user);
         return currentUser!;
       },
     );
